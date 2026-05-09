@@ -1,136 +1,291 @@
-2<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width. initial-scale=1.0" />
-    <title> Mars Media | Services</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mass Media | Services &amp; Pricing</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-<nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="aboutus.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-    <hr />
 
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg mm-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">MASS<span>.</span>MEDIA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mmNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mmNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <main>
-        <h1>Services and Pricing</h1>
-        <p>
-            All prices are in Botswana Pula (BWP). Listed prices represen the <strong>starting prices</strong> for each service category. 
-            Final pricing may vary depending on scope, location and turnaround time
-        </p>
+  <!-- ===== PAGE HERO ===== -->
+  <section class="mm-page-hero mm-page-top">
+    <div class="mm-page-hero-bg" style="background-image:url('IMG_5995.png');"></div>
+    <div class="mm-page-hero-overlay"></div>
+    <div class="container">
+      <div class="mm-page-hero-content">
+        <p class="mm-breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Services</p>
+        <h1 class="mm-page-hero-title">Services &amp; <span style="color:var(--red);">Pricing</span></h1>
+      </div>
+    </div>
+  </section>
 
-    <section>
-        <h2>01- Wedding Coverage</h2>
-        <p>
-            Full day wedding celebration coverage capturing traditionak ceremonies, celebrations and candid moments. 
-            Deliverables include:
-            <ul>Professionally edited 4K highlight Video</ul>
-            <ul>edited photos</ul>
-            <ul>drone shots</ul>
-            <ul>printed memories</ul>
-        </p>
+  <!-- ===== PRICING NOTE ===== -->
+  <section style="background:rgba(204,0,0,0.08); border-bottom:1px solid rgba(204,0,0,0.15); padding:1.2rem 0;">
+    <div class="container text-center">
+      <p style="margin:0; font-size:.88rem; color:var(--grey-light);">
+        <i class="fa-solid fa-circle-info mm-red me-2"></i>
+        All prices are in <strong style="color:var(--white);">Botswana Pula (BWP)</strong> and represent <strong style="color:var(--white);">starting prices</strong>. Final pricing may vary depending on scope, location, and turnaround time.
+      </p>
+    </div>
+  </section>
 
-        <p><strong>Starting from:</strong>P6 899.00</p>
-    </section>
+  <!-- ===== SERVICES GRID ===== -->
+  <section class="mm-section mm-section-dark">
+    <div class="container">
+      <div class="row g-4">
 
-    <section>
-        <h2>02- Livestreaming Events</h2>
-        <p>
-            Professional livestreaming services for corporate events, funerals, graduations, conferences and private functions. 
-            Deliverables include:
-            <ul>Event Recording</ul>
-            <ul>Live broadcast</ul>
-            <ul>On screen graphics</ul>
-        </p>
+        <!-- 01 Wedding -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="mm-price-card h-100">
+            <div style="margin-bottom:1.5rem;">
+            <img src="1333.png" alt="Wedding" style="width:100%; height:180px; object-fit:cover; margin-bottom:1.5rem;" />
+            </div>
+            <div class="mm-price-from">Starting from</div>
+            <div class="mm-price-number">P6,899</div>
+            <div class="mm-price-title">01 — Wedding Coverage</div>
+            <p style="font-size:.85rem; color:var(--grey-mid); margin-bottom:1rem;">Full day wedding celebration coverage capturing traditional ceremonies and candid moments.</p>
+            <div class="mm-price-divider"></div>
+            <ul class="mm-price-list">
+              <li>Professionally edited 4K highlight video</li>
+              <li>Edited photos</li>
+              <li>Drone shots</li>
+              <li>Printed memories</li>
+            </ul>
+            <a href="contact.html" class="btn-mm-primary w-100 justify-content-center"><span>Book Now</span> <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-        <p><strong>Starting from:</strong>P3 499.00</p>
-    </section>
+        <!-- 02 Livestreaming -->
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+          <div class="mm-price-card h-100">
+            <div style="margin-bottom:1.5rem;">
+              <img src="20250524_104924.png" alt="Livestreaming" style="width:100%; height:180px; object-fit:cover; margin-bottom:1.5rem;" />
+            </div>
+            <div class="mm-price-from">Starting from</div>
+            <div class="mm-price-number">P3,499</div>
+            <div class="mm-price-title">02 — Livestreaming Events</div>
+            <p style="font-size:.85rem; color:var(--grey-mid); margin-bottom:1rem;">Professional livestreaming for corporate events, funerals, graduations, conferences and private functions.</p>
+            <div class="mm-price-divider"></div>
+            <ul class="mm-price-list">
+              <li>Event recording</li>
+              <li>Live broadcast</li>
+              <li>On-screen graphics</li>
+            </ul>
+            <a href="contact.html" class="btn-mm-primary w-100 justify-content-center"><span>Book Now</span> <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-<section>
-        <h2>03- Organisation Ads and Campaigns</h2>
-        <p>
-           Advertisement and campaign video production for companies, NGOs, government departments and organisations
-           Ideal for brand awareness, promotions and storytelling driven campaigns. 
-           Deliverables include:
-            <ul>Professionally edited 4K highlight Video</ul>
-            <ul>Edited photos</ul>
-            <ul>drone shots</ul>
-            <ul>Graphics</ul>
-        </p>
+        <!-- 03 Organisation Ads -->
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+          <div class="mm-price-card h-100">
+            <div style="margin-bottom:1.5rem;">
+            <img src="photo_2025-09-12_09-20-43.png" alt="Organisation Ads" style="width:100%; height:180px; object-fit:cover; margin-bottom:1.5rem;" />
+            </div>
+            <div class="mm-price-from">Starting from</div>
+            <div class="mm-price-number">P5,899</div>
+            <div class="mm-price-title">03 — Organisation Ads &amp; Campaigns</div>
+            <p style="font-size:.85rem; color:var(--grey-mid); margin-bottom:1rem;">Advertisement and campaign video production for companies, NGOs, government departments and organisations.</p>
+            <div class="mm-price-divider"></div>
+            <ul class="mm-price-list">
+              <li>Professionally edited 4K video</li>
+              <li>Edited photos</li>
+              <li>Drone shots</li>
+              <li>Graphics</li>
+            </ul>
+            <a href="contact.html" class="btn-mm-primary w-100 justify-content-center"><span>Book Now</span> <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-        <p><strong>Starting from:</strong>P5 899.00</p>
-    </section>
+        <!-- 04 Real Estate -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="mm-price-card h-100">
+            <div style="margin-bottom:1.5rem;">
+              <img src="IMG_4219.png" alt="Real Estate" style="width:100%; height:180px; object-fit:cover; margin-bottom:1.5rem;" />
+            </div>
+            <div class="mm-price-from">Starting from</div>
+            <div class="mm-price-number">P1,899</div>
+            <div class="mm-price-title">04 — Real Estate Content</div>
+            <p style="font-size:.85rem; color:var(--grey-mid); margin-bottom:1rem;">Property walkthrough videos showcasing interiors and exteriors using stabilised cameras and optional drone footage.</p>
+            <div class="mm-price-divider"></div>
+            <ul class="mm-price-list">
+              <li>Professionally edited 4K video</li>
+              <li>Edited photos</li>
+              <li>Drone shots</li>
+              <li>Graphics</li>
+            </ul>
+            <a href="contact.html" class="btn-mm-primary w-100 justify-content-center"><span>Book Now</span> <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-    <section>
-        <h2>04- Real Estate Content</h2>
-        <p>
-            Property walkthrough videos showcasing interiors and exteriors using 
-            stabilised cameras and optional drone footages
-            Ideal for property listings, agents and developers
-            Deliverables include:
-            <ul>Professionally edited 4K Video</ul>
-            <ul>edited photos</ul>
-            <ul>drone shots</ul>
-            <ul>Graphics</ul>
-        </p>
+        <!-- 05 Product -->
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+          <div class="mm-price-card h-100">
+            <div style="margin-bottom:1.5rem;">
+              <img src="photo_2025-11-17_13-00-22.png" alt="Product Showcasing" style="width:100%; height:180px; object-fit:cover; margin-bottom:1.5rem;" />
+            </div>
+            <div class="mm-price-from">Starting from</div>
+            <div class="mm-price-number">P1,899</div>
+            <div class="mm-price-title">05 — Product Showcasing</div>
+            <p style="font-size:.85rem; color:var(--grey-mid); margin-bottom:1rem;">Studio-quality product photography and videography for brands, online stores and manufacturers.</p>
+            <div class="mm-price-divider"></div>
+            <ul class="mm-price-list">
+              <li>Clean lighting setup</li>
+              <li>Creative visuals</li>
+              <li>Edited photos</li>
+              <li>Edited videos</li>
+            </ul>
+            <a href="contact.html" class="btn-mm-primary w-100 justify-content-center"><span>Book Now</span> <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-        <p><strong>Starting from:</strong>P1 899.00</p>
-    </section>
+        <!-- 06 Restaurant -->
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+          <div class="mm-price-card h-100">
+            <div style="margin-bottom:1.5rem;">
+              <img src="IMG_2293.png" alt="Restaurant Ads" style="width:100%; height:180px; object-fit:cover; margin-bottom:1.5rem;" />
+            </div>
+            <div class="mm-price-from">Starting from</div>
+            <div class="mm-price-number">P6,899</div>
+            <div class="mm-price-title">06 — Restaurant Ads</div>
+            <p style="font-size:.85rem; color:var(--grey-mid); margin-bottom:1rem;">Visually engaging food and atmosphere content for restaurants, cafes, and food brands. Perfect for Instagram, Facebook &amp; TikTok.</p>
+            <div class="mm-price-divider"></div>
+            <ul class="mm-price-list">
+              <li>Professionally edited 4K video</li>
+              <li>Edited photos</li>
+            </ul>
+            <a href="contact.html" class="btn-mm-primary w-100 justify-content-center"><span>Book Now</span> <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-    <section>
-        <h2>05- Product Showcasing</h2>
-        <p>
-           Studio-quality product photography and videography for brands, online stores and manufacturers, 
-            Deliverables include:
-            <ul>Clean lighting</ul>
-            <ul>Creative visuals</ul>
-            <ul>Edited Photos</ul>
-            <ul>Edited Videos</ul>
-        </p>
+        <!-- 07 Event Coverage -->
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="mm-price-card h-100">
+            <div style="margin-bottom:1.5rem;">
+              <img src="IMG_7293.png" alt="Event Coverage" style="width:100%; height:180px; object-fit:cover; margin-bottom:1.5rem;" />
+            </div>
+            <div class="mm-price-from">Starting from</div>
+            <div class="mm-price-number">P4,899</div>
+            <div class="mm-price-title">07 — Event Coverage</div>
+            <p style="font-size:.85rem; color:var(--grey-mid); margin-bottom:1rem;">Professional coverage of corporate events, concerts, launches and community gatherings.</p>
+            <div class="mm-price-divider"></div>
+            <ul class="mm-price-list">
+              <li>Professionally edited 4K highlight video</li>
+              <li>Edited photos</li>
+              <li>Drone shots</li>
+              <li>Printed memories</li>
+            </ul>
+            <a href="contact.html" class="btn-mm-primary w-100 justify-content-center"><span>Book Now</span> <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-        <p><strong>Starting from:</strong>P1 899.00</p>
-    </section>
+        <!-- 08 Retainer -->
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+          <div class="mm-price-card h-100">
+            <div style="margin-bottom:1.5rem;">
+              <img src="IMG_7821.png" alt="Corporate Retainer" style="width:100%; height:180px; object-fit:cover; margin-bottom:1.5rem;" />
+            </div>
+            <div class="mm-price-from">Starting from</div>
+            <div class="mm-price-number">P5,899</div>
+            <div class="mm-price-title">08 — Retainer / Corporate</div>
+            <p style="font-size:.85rem; color:var(--grey-mid); margin-bottom:1rem;">Monthly content production retainers tailored for businesses in need of ongoing media production, social media content and campaign support.</p>
+            <div class="mm-price-divider"></div>
+            <ul class="mm-price-list">
+              <li>Ongoing media production</li>
+              <li>Social media content</li>
+              <li>Campaign support</li>
+            </ul>
+            <a href="contact.html" class="btn-mm-primary w-100 justify-content-center"><span>Get in Touch</span> <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
 
-    <section>
-        <h2>06- Restaurant Ads</h2>
-        <p>
-            Visually engaging food and atmosphere content for restaurants, cafes and food brands
-            Perfect for menue creation, social media marketing on Instagram, Facebook, Tiktok and other social media platforms 
-            Deliverables include:
-            <ul>Professionally edited 4K  Video</ul>
-            <ul>Edited photos</ul>
-        </p>
+        <!-- CTA Card -->
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+          <div style="background:linear-gradient(135deg, var(--red-dark), var(--red)); padding:2.5rem; height:100%; display:flex; flex-direction:column; justify-content:center; text-align:center; position:relative; overflow:hidden;">
+            <div style="position:absolute;inset:0; opacity:0.05; background-image:url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=400&q=40'); background-size:cover;"></div>
+            <div style="position:relative; z-index:1;">
+              <i class="fa-solid fa-headset" style="font-size:2.5rem; color:rgba(255,255,255,0.9); margin-bottom:1rem;"></i>
+              <h3 style="font-family:var(--font-display); font-size:1.8rem; color:var(--white-pure); margin-bottom:0.8rem;">NOT SURE WHAT YOU NEED?</h3>
+              <p style="color:rgba(255,255,255,0.8); font-size:.9rem; margin-bottom:1.5rem;">Talk to us and we'll put together the perfect package for your project and budget.</p>
+              <a href="contact.html" class="btn-mm-outline" style="border-color:rgba(255,255,255,0.6);"><span>Contact Us</span></a>
+            </div>
+          </div>
+        </div>
 
-        <p><strong>Starting from:</strong>P6 899.00</p>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section>
-        <h2>07- Event Coverage</h2>
-        <p>
-            Professional coverage of corporate events, concerts, launches and community gatherings 
-            Deliverables include:
-            <ul>Professionally edited 4K highlight Video</ul>
-            <ul>edited photos</ul>
-            <ul>drone shots</ul>
-            <ul>printed memories</ul>
-        </p>
+  <!-- ===== FOOTER ===== -->
+  <footer class="mm-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="mm-footer-brand">MASS<span>.</span>MEDIA</div>
+          <p class="mm-footer-tagline">"Premium Video Production · Creative Content · Livestreaming"</p>
+          <div class="mm-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6">
+          <div class="mm-footer-heading">Navigate</div>
+          <ul class="mm-footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="mm-footer-heading">Services</div>
+          <ul class="mm-footer-links">
+            <li><a href="services.html">Wedding Coverage</a></li>
+            <li><a href="services.html">Livestreaming</a></li>
+            <li><a href="services.html">Organisation Ads</a></li>
+            <li><a href="services.html">Real Estate</a></li>
+            <li><a href="services.html">Product Showcasing</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <div class="mm-footer-heading">Contact</div>
+          <p style="font-size:.85rem; color:var(--grey-mid); margin-bottom:.5rem;"><i class="fa-solid fa-location-dot mm-red me-2"></i>Botswana</p>
+          <p style="font-size:.85rem; color:var(--grey-mid); margin-bottom:.5rem;"><a href="mailto:info@massmedia.co.bw" style="color:var(--grey-mid); text-decoration:none;"><i class="fa-solid fa-envelope mm-red me-2"></i>info@massmedia.co.bw</a></p>
+          <p style="font-size:.85rem; color:var(--grey-mid);"><a href="tel:+26771778824" style="color:var(--grey-mid); text-decoration:none;"><i class="fa-solid fa-phone mm-red me-2"></i>+267 71 778 824</a></p>
+        </div>
+      </div>
+      <div class="mm-footer-bottom">
+        <p class="mm-footer-copy">&copy; 2026 <span>Mass Media</span>. All rights reserved. | Botswana</p>
+        <p class="mm-footer-copy" style="color:var(--grey-dark);">Ben Bango &amp; Katlego Mokgwathi</p>
+      </div>
+    </div>
+  </footer>
 
-        <p><strong>Starting from:</strong>P4 899.00</p>
-    </section>
-
-    <section>
-        <h2>08- Retainer Long term Corporate Services</h2>
-        <p>
-            Monthly content production retainers talired for businesses in need of ongoing media production, social media content and campain support. 
-            
-        </p>
-
-        <p><strong>Starting from:</strong>P5 899.00</p>
-    </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
 </body>
+</html>

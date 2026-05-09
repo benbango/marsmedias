@@ -4,72 +4,315 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mass Media | Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .filter-btn {
+      font-family: var(--font-condensed);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: transparent;
+      color: var(--grey-mid);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 0.5rem 1.4rem;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--white-pure);
+    }
+    .portfolio-item { transition: all 0.4s ease; }
+    .portfolio-item.hidden { display: none; }
+    .coming-soon-overlay {
+      position:absolute; inset:0;
+      background: rgba(10,10,10,0.85);
+      display:flex; flex-direction:column;
+      align-items:center; justify-content:center;
+      gap:0.5rem;
+    }
+    .coming-soon-text {
+      font-family: var(--font-condensed);
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--red);
+    }
+  </style>
 </head>
 <body>
-<nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="aboutus.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
 
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg mm-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">MASS<span>.</span>MEDIA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mmNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mmNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <hr/>
+  <!-- ===== PAGE HERO ===== -->
+  <section class="mm-page-hero mm-page-top">
+    <div class="mm-page-hero-bg" style="background-image:url('IMG_2148.png');"></div>
+    <div class="mm-page-hero-overlay"></div>
+    <div class="container">
+      <div class="mm-page-hero-content">
+        <p class="mm-breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Portfolio</p>
+        <h1 class="mm-page-hero-title">Our <span style="color:var(--red);">Work</span></h1>
+      </div>
+    </div>
+  </section>
 
-    <main>
-        <h1>Portfolio</h1>
-        <p>Our work Spans across many indutries and creative formats. Below is a selection of the categories we produce content for</p>
+  <!-- ===== PORTFOLIO ===== -->
+  <section class="mm-section mm-section-dark">
+    <div class="container">
+      <div class="mm-section-header">
+        <div class="row align-items-end">
+          <div class="col-lg-6 reveal">
+            <span class="mm-label">Portfolio</span>
+            <h2 class="mm-heading">Creative <span>Projects</span></h2>
+            <p class="mm-subtext">Our work spans many industries and creative formats. Below is a selection of the categories we produce content for.</p>
+          </div>
+          <div class="col-lg-6 reveal reveal-delay-2">
+            <!-- Filter Buttons -->
+            <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="weddings">Weddings</button>
+              <button class="filter-btn" data-filter="events">Events</button>
+              <button class="filter-btn" data-filter="campaigns">Campaigns</button>
+              <button class="filter-btn" data-filter="product">Product</button>
+              <button class="filter-btn" data-filter="realestate">Real Estate</button>
+              <button class="filter-btn" data-filter="food">Food</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <section>
-            <h2>Wedding Films</h2>
-            <p>Beautiful, cinematic wedding coverage capturing every emotion- from the Patlo Magadi to the final chenchi tsa bo Mma Malome!</p>
-            <p><em>[Wedding Video and photo gallery coming soon!]</em></p>
-        </section>
+      <div class="row g-3" id="portfolioGrid">
 
-        <section>
-            <h2>Organisation Campaigns</h2>
-            <p>High impact advertising campaigns and promotional content for NGOs, government bodies and corporate clients</p>
-            <p><em>[Campaign Video and photo gallery coming soon!]</em></p>
-        </section>
+        <!-- Weddings -->
+        <div class="col-md-6 col-lg-4 portfolio-item reveal" data-category="weddings">
+          <div class="mm-img-card" style="aspect-ratio:4/3;">
+            <span class="mm-img-card-badge">Weddings</span>
+            <img src="photo_2025-11-17_12-43-59.png" alt="Wedding film" loading="lazy" />
+            <div class="mm-img-card-overlay">
+              <div class="mm-img-card-title">Cinematic Wedding Films</div>
+            </div>
+            <div class="coming-soon-overlay">
+              <i class="fa-solid fa-film" style="font-size:2rem; color:var(--red);"></i>
+              <span class="coming-soon-text">Gallery Coming Soon</span>
+            </div>
+          </div>
+        </div>
 
-        <section>
-            <h2>Event Coverage</h2>
-            <p>Same-day edits, highlight reels, and full event documentation from conferences, activations, and concerts</p>
-            <p><em>[Event gallery coming soon!]</em></p>
-        </section>
+        <div class="col-md-6 col-lg-8 portfolio-item reveal reveal-delay-1" data-category="weddings">
+          <div class="mm-img-card" style="aspect-ratio:16/9;">
+            <span class="mm-img-card-badge">Weddings</span>
+            <img src="IMG_8949.png" alt="Wedding ceremony" loading="lazy" />
+            <div class="mm-img-card-overlay">
+              <div class="mm-img-card-title">Patlo Magadi Ceremonies</div>
+            </div>
+            <div class="coming-soon-overlay">
+              <i class="fa-solid fa-film" style="font-size:2rem; color:var(--red);"></i>
+              <span class="coming-soon-text">Gallery Coming Soon</span>
+            </div>
+          </div>
+        </div>
 
-        <section>
-            <h2>Event Coverage</h2>
-            <p>Same-day edits, highlight reels, and full event documentation from conferences, activations, and concerts</p>
-            <p><em>[Event gallery coming soon!]</em></p>
-        </section>
+        <!-- Events -->
+        <div class="col-md-6 col-lg-8 portfolio-item reveal" data-category="events">
+          <div class="mm-img-card" style="aspect-ratio:16/9;">
+            <span class="mm-img-card-badge">Events</span>
+            <img src="IMG_7293.png" alt="Event coverage" loading="lazy" />
+            <div class="mm-img-card-overlay">
+              <div class="mm-img-card-title">Corporate Event Coverage</div>
+            </div>
+            <div class="coming-soon-overlay">
+              <i class="fa-solid fa-tower-broadcast" style="font-size:2rem; color:var(--red);"></i>
+              <span class="coming-soon-text">Gallery Coming Soon</span>
+            </div>
+          </div>
+        </div>
 
-    <section>
-        <h2>Product Showcasing</h2>
-        <p>Studio quality product video and photos for brands and e-commerce sellers</p>
-        <p><em>[Product Showcasing coming soon]</em></p>
-    </section>
+        <div class="col-md-6 col-lg-4 portfolio-item reveal reveal-delay-1" data-category="events">
+          <div class="mm-img-card" style="aspect-ratio:4/3;">
+            <span class="mm-img-card-badge">Events</span>
+            <img src="20250524_104924.png" alt="Concert coverage" loading="lazy" />
+            <div class="mm-img-card-overlay">
+              <div class="mm-img-card-title">Concert &amp; Show Coverage</div>
+            </div>
+            <div class="coming-soon-overlay">
+              <i class="fa-solid fa-tower-broadcast" style="font-size:2rem; color:var(--red);"></i>
+              <span class="coming-soon-text">Gallery Coming Soon</span>
+            </div>
+          </div>
+        </div>
 
-    <section>
-        <h2>Real Estate</h2>
-        <p>Drone aerials and interior walkthroughs for property agents and developers</p>
-        <p><em>[Real Estate Showcasing coming soon ]</em></p>
-    </section>
+        <!-- Campaigns -->
+        <div class="col-md-6 col-lg-4 portfolio-item reveal" data-category="campaigns">
+          <div class="mm-img-card" style="aspect-ratio:4/3;">
+            <span class="mm-img-card-badge">Campaigns</span>
+            <img src="photo_2025-09-12_09-20-43.png" alt="Organisation campaign" loading="lazy" />
+            <div class="mm-img-card-overlay">
+              <div class="mm-img-card-title">Organisation Campaigns</div>
+            </div>
+            <div class="coming-soon-overlay">
+              <i class="fa-solid fa-bullhorn" style="font-size:2rem; color:var(--red);"></i>
+              <span class="coming-soon-text">Gallery Coming Soon</span>
+            </div>
+          </div>
+        </div>
 
-    <section>
-        <h2>Restaurant and Food content</h2>
-        <p> Mouth-watering food style content for restaurants, cafe's and food brands</p>
-        <p><em>[ Restaurant content gallery coming soon ]</em></p>
-    </section>
-    </main>
+        <!-- Product -->
+        <div class="col-md-6 col-lg-4 portfolio-item reveal reveal-delay-1" data-category="product">
+          <div class="mm-img-card" style="aspect-ratio:4/3;">
+            <span class="mm-img-card-badge">Product</span>
+            <img src="photo_2025-11-17_13-00-22.png" alt="Product showcasing" loading="lazy" />
+            <div class="mm-img-card-overlay">
+              <div class="mm-img-card-title">Product Showcasing</div>
+            </div>
+            <div class="coming-soon-overlay">
+              <i class="fa-solid fa-camera" style="font-size:2rem; color:var(--red);"></i>
+              <span class="coming-soon-text">Gallery Coming Soon</span>
+            </div>
+          </div>
+        </div>
 
-<hr />
+        <!-- Real Estate -->
+        <div class="col-md-6 col-lg-4 portfolio-item reveal reveal-delay-2" data-category="realestate">
+          <div class="mm-img-card" style="aspect-ratio:4/3;">
+            <span class="mm-img-card-badge">Real Estate</span>
+            <img src="IMG_4219.png" alt="Real estate" loading="lazy" />
+            <div class="mm-img-card-overlay">
+              <div class="mm-img-card-title">Drone &amp; Property Walkthroughs</div>
+            </div>
+            <div class="coming-soon-overlay">
+              <i class="fa-solid fa-helicopter" style="font-size:2rem; color:var(--red);"></i>
+              <span class="coming-soon-text">Gallery Coming Soon</span>
+            </div>
+          </div>
+        </div>
 
-  <footer>
-    <p>&copy; 2026 Mass Media. All rights reserved. | Botswana</p>
+        <!-- Food -->
+        <div class="col-md-6 portfolio-item reveal" data-category="food">
+          <div class="mm-img-card" style="aspect-ratio:16/9;">
+            <span class="mm-img-card-badge">Food &amp; Restaurant</span>
+            <img src="IMG_2293.png" alt="Food photography" loading="lazy" />
+            <div class="mm-img-card-overlay">
+              <div class="mm-img-card-title">Restaurant &amp; Food Content</div>
+            </div>
+            <div class="coming-soon-overlay">
+              <i class="fa-solid fa-utensils" style="font-size:2rem; color:var(--red);"></i>
+              <span class="coming-soon-text">Gallery Coming Soon</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 portfolio-item reveal reveal-delay-1" data-category="food">
+          <div class="mm-img-card" style="aspect-ratio:16/9;">
+            <span class="mm-img-card-badge">Food</span>
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80" alt="Food photography" loading="lazy" />
+            <div class="mm-img-card-overlay">
+              <div class="mm-img-card-title">Food Styling &amp; Photography</div>
+            </div>
+            <div class="coming-soon-overlay">
+              <i class="fa-solid fa-utensils" style="font-size:2rem; color:var(--red);"></i>
+              <span class="coming-soon-text">Gallery Coming Soon</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center mt-5 reveal">
+        <p class="mm-subtext mx-auto mb-4">Like what you see? Let's create something extraordinary together.</p>
+        <a href="contact.html" class="btn-mm-primary"><span>Start a Project</span> <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="mm-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="mm-footer-brand">MASS<span>.</span>MEDIA</div>
+          <p class="mm-footer-tagline">"Premium Video Production · Creative Content · Livestreaming"</p>
+          <div class="mm-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6">
+          <div class="mm-footer-heading">Navigate</div>
+          <ul class="mm-footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="mm-footer-heading">Services</div>
+          <ul class="mm-footer-links">
+            <li><a href="services.html">Wedding Coverage</a></li>
+            <li><a href="services.html">Livestreaming</a></li>
+            <li><a href="services.html">Organisation Ads</a></li>
+            <li><a href="services.html">Real Estate</a></li>
+            <li><a href="services.html">Product Showcasing</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <div class="mm-footer-heading">Contact</div>
+          <p style="font-size:.85rem; color:var(--grey-mid); margin-bottom:.5rem;"><i class="fa-solid fa-location-dot mm-red me-2"></i>Botswana</p>
+          <p style="font-size:.85rem; color:var(--grey-mid); margin-bottom:.5rem;"><a href="mailto:info@massmedia.co.bw" style="color:var(--grey-mid); text-decoration:none;"><i class="fa-solid fa-envelope mm-red me-2"></i>info@massmedia.co.bw</a></p>
+          <p style="font-size:.85rem; color:var(--grey-mid);"><a href="tel:+26771778824" style="color:var(--grey-mid); text-decoration:none;"><i class="fa-solid fa-phone mm-red me-2"></i>+267 71 778 824</a></p>
+        </div>
+      </div>
+      <div class="mm-footer-bottom">
+        <p class="mm-footer-copy">&copy; 2026 <span>Mass Media</span>. All rights reserved. | Botswana</p>
+        <p class="mm-footer-copy" style="color:var(--grey-dark);">Ben Bango &amp; Katlego Mokgwathi</p>
+      </div>
+    </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+  <script>
+    // Portfolio Filter
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
