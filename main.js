@@ -1,9 +1,8 @@
-/* =====================================================
-   MASS MEDIA — main.js
-   Scroll Reveal · Navbar scroll effect · Counter animation
-   ===================================================== */
 
-// ── Navbar: darken on scroll ──────────────────────────
+
+
+
+
 const navbar = document.querySelector('.mm-navbar');
 if (navbar) {
   window.addEventListener('scroll', () => {
@@ -17,7 +16,9 @@ if (navbar) {
   });
 }
 
-// ── Scroll Reveal ─────────────────────────────────────
+
+
+
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach(entry => {
@@ -32,7 +33,9 @@ const revealObserver = new IntersectionObserver(
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// ── Counter Animation for stat numbers ───────────────
+
+
+
 function animateCounter(el, target, suffix = '', duration = 1600) {
   const isText = isNaN(parseInt(target));
   if (isText) return; // skip non-numeric like "BWA"
@@ -68,7 +71,7 @@ const counterObserver = new IntersectionObserver(
 
 document.querySelectorAll('.mm-stat-number').forEach(el => counterObserver.observe(el));
 
-// ── Smooth anchor links ───────────────────────────────
+
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', function (e) {
     const target = document.querySelector(this.getAttribute('href'));
